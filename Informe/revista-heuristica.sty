@@ -1,0 +1,435 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hoja de estilos realizado para la 
+% Revista Heuristica de la Escuela de Estadistica
+% Universidad del Valle, Cali, Colombia.
+%
+% Basado en el formato de la Revista Politecnica
+% de la Escuela Politecnica Nacional de Ecuador.
+% http://www.revistapolitecnica.epn.edu.ec/
+%
+% Desarrollado por: Fernando Guevara D
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{revista-heuristica}[2014/04/20]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formato del Texto, Idioma, Tipo de Letra %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[utf8]{inputenc}
+%\RequirePackage[latin1]{inputenc} %Usar en Windows
+\RequirePackage[T1]{fontenc} %Letras vectoriales
+\RequirePackage{times} %Estilo de letra Times New Roman
+\RequirePackage[english,spanish,es-nodecimaldot,es-nolayout]{babel}
+\RequirePackage[textwidth=396pt,left=1.3cm,right=1.3cm,top=2.5cm,bottom=2.5cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Complemento para edicion de textos matemáticos mas profesional y artistica %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{amsmath,amssymb,bm}
+%\RequirePackage[collision]{chemsym}
+\RequirePackage{mathpazo}
+\RequirePackage{ifthen}
+\RequirePackage[squaren]{SIunits}
+\RequirePackage[spanish]{varioref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Entornos de Listas %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\RequirePackage{enumitem} % tiene problemas de compatibilidad con enumerate
+\RequirePackage{enumerate} % permite personalizar el entorno enumerate con la opcion [*] donde * puede ser 1, A, a, I, i
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inclusion de Graficas, Tablas y Colores %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{graphicx}
+\RequirePackage[font={small},tablename=Tabla,labelfont={bf,small},labelsep=period,justification=justified]{caption}
+\RequirePackage{float}
+%\RequirePackage[table,dvipsnames]{xcolor}
+\RequirePackage{colortbl}
+\RequirePackage{multirow}
+\RequirePackage{array}
+%%% Colorear Objetos %%%
+\RequirePackage{color}
+\RequirePackage{xcolor}
+\definecolor{gris}{rgb}{0.9,0.9,0.9}
+\definecolor{blanco}{rgb}{1,1,1}
+\definecolor{verde}{HTML}{6EAF23}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estilos de Bibliografia %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[round]{natbib}
+%\RequirePackage[]{natbib}
+%\RequirePackage[backend=bibtex]{biblatex}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modificar la distancian entre lineas y Columnas %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{0.9}
+\RequirePackage{multicol}
+  \setlength{\columnsep}{0.7cm} %Separacion entre columnas
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Paquetes Utilitarios %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{twoopt} %Permitir opciones en los comandos
+\RequirePackage{abstract}
+\RequirePackage{calc}
+\RequirePackage{forloop}
+\RequirePackage[explicit]{titlesec}
+\RequirePackage{lipsum}
+%\RequirePackage{twoside}
+\RequirePackage{pdfpages}
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Parrafos y Sangrias %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength\parindent{0pt} % Eliminar la sangría automática de los párrafos
+\setlength{\parskip}{2mm} % Aumentar la separacion entre parrafos
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Evitar el corte de las palabras %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pretolerance=2000
+%\tolerance=3000
+%%% Evitar particion de palabras %%%
+\usepackage[none]{hyphenat}
+    \sloppy
+%%% Justificar las lineas de texto %%%
+\usepackage{ragged2e}
+\justifying
+%%% Usar Espacios entre lineas %%%
+\usepackage{setspace}
+ \singlespacing
+%\onehalfspacing
+% \doublespacing
+% \setstretch{1.1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Igualar Verticalmente las ultimas dos columnas %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{flushend}
+
+%%%%%%%%%%%%%%
+% Contadores %
+%%%%%%%%%%%%%%
+\newcounter{tablarevista}
+\setcounter{tablarevista}{0}
+\newcounter{figurarevista}
+\setcounter{figurarevista}{0}
+\newcounter{autores}
+\setcounter{autores}{0}
+\newcounter{autoresx}
+\setcounter{autoresx}{0}
+\newcounter{institutos}
+\setcounter{institutos}{0}
+\newcounter{institutosx}
+\setcounter{institutosx}{0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  Encabezado y Pie de Pagina %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{fancyhdr}
+
+\newcommand{\sethdrevista}%
+{
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.2pt} % grosor de la línea de la cabecera
+\renewcommand{\footrulewidth}{0.2pt} % grosor de la línea del pie
+
+  \fancyhead{}% Quitar la cabecera por defecto
+  \fancyfoot{}% Quitar el pie de pagina por defecto
+  
+\setlength{\headheight}{15pt}
+
+\fancyhead[RO]{\textit{\small \@nombrerevista{} \@volumenrevista{}, ISSN: \@issnrevista{},  \@mesrevista{} \@aniorevista{}. p.\pageref{PrimeraPagina}-\pageref{UltimaPagina}}}
+ 
+\fancyhead[LE]{\textit{
+			  \forloop[1]{autoresx}{1}{\value{autoresx} < \value{autores}}
+			  {
+			    {} \expandafter\csname @shortauthorrevista\arabic{autoresx}\endcsname{};
+			  }
+			  {} \expandafter\csname @shortauthorrevista\arabic{autoresx}\endcsname -- \@shorttitlerevista{} }
+			}%
+\fancyfoot[RO,LE]{\thepage}
+%\fancyfoot[RO,LE]{\textit{\@shorttitlerevista{} \colorbox{gris}{\color{blanco} \thepage}}%
+\fancyfoot[CO,CE]{\textit{Universidad del Valle - Facultad de Ingenier\'ia - Escuela de Estad\'istica}}%
+}
+
+%%%%%%%%%%
+% Titulo %
+%%%%%%%%%%
+\pagestyle{fancy}
+
+\newcommand{\titlerevista}[2][]%
+  {\newcommand\@titlerevista{#2}
+   \ifthenelse{\not\equal{#1}{}}
+              {\newcommand\@shorttitlerevista{#1%\ \ldots
+              }}
+              {\newcommand\@shorttitlerevista{\@titlerevista}}
+  }
+
+%El comando \NAutor genera comandos con nombres \@authorrevista#1 donde #1 se reemplaza por la opción ingresada
+\newcommandtwoopt{\@NAutor}[4][1][]{
+\expandafter\newcommand\csname @authorrevista#1\endcsname{#3#4}%
+\ifthenelse{\not\equal{#2}{}}%
+ 	             {\expandafter\newcommand\csname @shortauthorrevista#1\endcsname{#2}}%
+	             {\expandafter\newcommand\csname @shortauthorrevista#1\endcsname{#3}}
+}
+
+\newcommandtwoopt{\authorrevista}[3][1][]%
+{
+   \refstepcounter{autores}
+   \ifthenelse{\equal{#1}{1}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^*$}}{}
+   \ifthenelse{\equal{#1}{2}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^{**}$}}{}
+   \ifthenelse{\equal{#1}{3}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^{***}$}}{}
+   \ifthenelse{\equal{#1}{4}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^{****}$}}{}
+   \ifthenelse{\equal{#1}{5}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^{\dagger}$}}{}
+   \ifthenelse{\equal{#1}{6}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^{\ddagger}$}}{}
+   \ifthenelse{\equal{#1}{7}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^{\ddagger\dagger}$}}{}
+   \ifthenelse{\equal{#1}{8}}
+              {\@NAutor[\arabic{autores}][#2]{#3}{$^{\ddagger\ddagger}$}}{}
+}
+
+
+\newcommandtwoopt{\@NInstituto}[4][1][]{%
+\expandafter\newcommand\csname @institucionprincipal#1\endcsname{#3}%
+\expandafter\newcommand\csname @institucionsecundaria#1\endcsname{#2}%
+\expandafter\newcommand\csname @email#1\endcsname{#4}%
+}
+
+
+\newcommandtwoopt{\institucionmail}[4][1][]%
+{
+   \refstepcounter{institutos}
+%   \newcommand\@institucionsecundaria{#2}
+   \ifthenelse{\equal{#1}{1}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^*$#3}{#4}}{}
+   \ifthenelse{\equal{#1}{2}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^{**}$#3}{#4}}{}
+   \ifthenelse{\equal{#1}{3}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^{***}$#3}{#4}}{}
+   \ifthenelse{\equal{#1}{4}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^{****}$#3}{#4}}{}
+   \ifthenelse{\equal{#1}{5}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^{\dagger}$#3}{#4}}{}
+   \ifthenelse{\equal{#1}{6}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^{\ddagger}$#3}{#4}}{}
+   \ifthenelse{\equal{#1}{7}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^{\ddagger\dagger}$#3}{#4}}{}
+   \ifthenelse{\equal{#1}{8}}
+              {\@NInstituto[\arabic{institutos}][#2]{$^{\ddagger\ddagger}$#3}{#4}}{}
+  }
+
+\newcommand{\email}[1]%
+  {\newcommand\@email{#1}}
+
+\newcommand{\fecharecepcion}[1]%
+  {\newcommand\@fecharecepcion{#1}}
+
+\newcommand{\fechaaceptacion}[1]%
+  {\newcommand\@fechaaceptacion{#1}}
+
+\newcommand{\nombrerevista}[1]%
+  {\newcommand\@nombrerevista{#1}}
+
+\newcommand{\volumenrevista}[1]%
+  {\newcommand\@volumenrevista{#1}}
+  
+\newcommand{\mesrevista}[1]%
+{\newcommand\@mesrevista{#1}}
+
+\newcommand{\aniorevista}[1]%
+  {\newcommand\@aniorevista{#1}}
+
+\newcommand{\numerorevista}[1]%
+  {\newcommand\@numerorevista{#1}}
+
+\newcommand{\issnrevista}[1]%
+  {\newcommand\@issnrevista{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Estilo del Titulo del Articulo %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\maketitlerevista{%
+  \title{\MakeUppercase{ \Huge \textbf{\@titlerevista}}\vspace{2\baselineskip}}%\\[0pt]}
+   \author{
+          \forloop[1]{autoresx}{1}{\value{autoresx} < \value{autores}}{{} \expandafter\csname @authorrevista\arabic{autoresx}\endcsname{};}%
+          {} \expandafter\csname @authorrevista\arabic{autoresx}\endcsname\\[3pt]
+          \forloop[1]{institutosx}{1}{\value{institutosx} < \value{institutos}}{\small%
+                {} \textit{\expandafter\csname @institucionprincipal\arabic{institutosx}\endcsname}%
+                \ifthenelse{\equal{\expandafter\csname @institucionsecundaria\arabic{institutosx}\endcsname}{}}
+                           {\\[1pt]}
+                           {\textit{, \expandafter\csname @institucionsecundaria\arabic{institutosx}\endcsname{}}\\[1pt]}%
+                \ifthenelse{\equal{\expandafter\csname @email\arabic{institutosx}\endcsname}{}}
+                           {}
+                           {\small e-mail: \expandafter\url{\expandafter\csname @email\arabic{institutosx}\endcsname}\\[1pt]}
+          }
+          {} \small \textit{\expandafter\csname @institucionprincipal\arabic{institutos}\endcsname}%
+                  \ifthenelse{\equal{\expandafter\csname @institucionsecundaria\arabic{institutos}\endcsname}{}}
+                             {\\[1pt]}
+                             {\textit{, \expandafter\csname @institucionsecundaria\arabic{institutos}\endcsname{}}\\[1pt]}
+                  \ifthenelse{\equal{\expandafter\csname @email\arabic{institutos}\endcsname}{}}
+                             {}
+                             {\small e-mail: \textit{\expandafter\href{mailto:\expandafter\csname @email\arabic{institutos}\endcsname}{\expandafter\csname @email\arabic{institutos}\endcsname}}\\[2pt]}
+                             %\href{mailto:\expandafter\csname @email\arabic{institutos}\endcsname}{\expandafter\csname @email\arabic{institutos}\endcsname}
+                             %\url{\expandafter\csname @email\arabic{institutos}\endcsname}
+   }
+   \date{}
+%  \date{\small\textbf{Recibido:} \@fecharecepcion \hspace{4em} \textbf{Aceptado:} \@fechaaceptacion}
+\begin{center}
+  \begin{minipage}{0.9\linewidth}
+    %\vspace{-4\baselineskip}
+    \maketitle
+  \end{minipage}
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Keywords y Palabras Claves %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\keywordsrevista}[1]{\vspace{\baselineskip}\parindent 0pt\textit{\textbf{Keywords}}: #1}
+\newcommand{\palabrasclavesrevista}[1]{\vspace{\baselineskip}\parindent 0pt\textbf{\textit{Palabras claves}}: #1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cambiar el formato de los titulos de las secciones y subsecciones %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\section}
+  {\normalfont}{\textbf{\thesection{}.}}{1em}{\textbf{\MakeUppercase{#1}}}
+  
+\titleformat{\subsection}
+  {\normalfont}{\thesubsection}{1ex}{\textit{#1}}
+  
+\titleformat{\subsubsection}
+  {\normalfont}{\thesubsubsection}{1ex}{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Titulo de las Tablas %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\captiontablarevista[1]{%
+  \refstepcounter{tablarevista}
+ % \\
+  \parindent 0pt
+  \vspace{0.5\baselineskip}
+  \sbox\@tempboxa{{\small\textbf{Tabla \thetablarevista}. #1}}
+  \ifdim \wd\@tempboxa >\hsize
+    {\small\textbf{Tabla \thetablarevista}. #1}\par
+  \else
+    \global\@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  }
+  
+%%%%%%%%%%%%%%%%%%%%%
+% Titulo de Figuras %
+%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\captionfigurarevista[1]{%
+  \refstepcounter{figurarevista}
+%  \\
+  \parindent 0pt
+  \vspace{0.5\baselineskip}
+  \sbox\@tempboxa{{\small\textbf{Figura \thefigurarevista}. #1}}
+  \ifdim \wd\@tempboxa >\hsize
+    {\small\textbf{Figura \thefigurarevista}. #1}\par
+  \else
+    \global\@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  }
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comandos para símbolos químicos y de unidades
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Ox}{\protect\kemtkn{O}}
+\newcommand{\ppm}{\protect\kemtkn{ppm}}
+\newcommand{\psig}{\protect\kemtkn{psig}}
+\newcommand{\rpm}{\protect\kemtkn{rpm}}
+\newcommand{\pH}{\protect\kemtkn{pH}}
+\newcommand{\UE}{\protect\kemtkn{UE}}
+\newcommand{\msnm}{\protect\kemtkn{msnm}}
+\newcommand{\calo}{\protect\kemtkn{cal}}
+\newcommand{\Da}{\protect\kemtkn{Da}}
+\newcommand{\MM}{\protect\kemtkn{MM}}
+
+%Comandos para operadores matemáticos
+\DeclareMathOperator*\Var{Var}
+\DeclareMathOperator*\Cov{Cov}
+\DeclareMathOperator*\E{E}
+
+%Permita partir los "display"
+\allowdisplaybreaks
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cambiar el grosor de la linea de las tablas %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\arrayrulewidth}{0,3pt}
+
+%\makeatletter%jamás se dece poner los comandos \makeatletter o \makeatother en un archivo de paquete (.sty) o de clase (.cls)
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+%\makeatother %jamás se dece poner los comandos \makeatletter o \makeatother en un archivo de paquete (.sty) o de clase (.cls)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ESTA PARTE SIEMPRE DEBE IR AL FINAL DEL ARCHIVO DE CONFIGURACION PARA EVITAR PROBLEMAS DE COMPATIBILIDAD %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formato de Enlaces internos y externos %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{hyperref}
+\hypersetup{
+    bookmarks=true,		% show bookmarks bar?
+    unicode=false,  		% non-Latin characters in Acrobat's bookmarks
+    pdftoolbar=true,       	% show Acrobat's toolbar?
+    pdfmenubar=true,        	% show Acrobat's menu?
+    pdffitwindow=true,     	% window fit to page when opened
+    pdfstartview={FitH},    	% fits the width of the page to the window
+    %pdftitle={My title},   	% title
+    %pdfauthor={Author},     	% author
+    %pdfsubject={Subject},   	% subject of the document
+    %pdfcreator={Creator},   	% creator of the document
+    %pdfproducer={Producer}, 	% producer of the document
+    %pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    %pdfnewwindow=true,      	% links in new PDF window
+    colorlinks=true,       	% false: boxed links; true: colored links
+    linkcolor=gray,          	% color of internal links (change box color with linkbordercolor)
+    citecolor=verde,        	% color of links to bibliography
+    filecolor=magenta,      	% color of file links
+    urlcolor=cyan,          	% color of external links
+    %pagebackref=true		% activate back references inside bibliography.
+}
+% Definicon de un nuevo estilo para las urls
+\def\url@heurstyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\times}}{\def\UrlFont{\small\itshape}}}
+% Asignacion del nuevo estilo
+\urlstyle{heur}
