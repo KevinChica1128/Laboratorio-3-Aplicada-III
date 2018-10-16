@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  14 OCT 2018 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  16 OCT 2018 15:47
 entering extended mode
 **"./Laboratorio 3.tex"
 ("Laboratorio 3.tex"
@@ -484,10 +484,10 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 246--247
 File: FigurasUV/nubeind.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubeind.pdf>
-Package pdftex.def Info: FigurasUV/nubeind.pdf used on input line 253.
+Package pdftex.def Info: FigurasUV/nubeind.pdf used on input line 256.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 253--254
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 256--257
  [][] 
  []
 
@@ -496,10 +496,10 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 253--254
 File: FigurasUV/nubevar.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubevar.pdf>
-Package pdftex.def Info: FigurasUV/nubevar.pdf used on input line 260.
+Package pdftex.def Info: FigurasUV/nubevar.pdf used on input line 265.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 260--261
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 265--266
  [][] 
  []
 
@@ -508,10 +508,10 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 260--261
 File: FigurasUV/nubegru.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubegru.pdf>
-Package pdftex.def Info: FigurasUV/nubegru.pdf used on input line 267.
+Package pdftex.def Info: FigurasUV/nubegru.pdf used on input line 274.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 267--268
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 274--275
  [][] 
  []
 
@@ -519,69 +519,56 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 267--268
 <FigurasUV/RS.pdf, id=50, 1027.84pt x 545.03625pt>
 File: FigurasUV/RS.pdf Graphic file (type pdf)
  <use FigurasUV/RS.pdf>
-Package pdftex.def Info: FigurasUV/RS.pdf used on input line 306.
+Package pdftex.def Info: FigurasUV/RS.pdf used on input line 319.
 (pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
 
-<FigurasUV/EP.pdf, id=51, 1027.84pt x 545.03625pt>
+[7 <./FigurasUV/RS.pdf>] <FigurasUV/EP.pdf, id=58, 1027.84pt x 545.03625pt>
 File: FigurasUV/EP.pdf Graphic file (type pdf)
- <use FigurasUV/EP.pdf>
-Package pdftex.def Info: FigurasUV/EP.pdf used on input line 312.
+
+<use FigurasUV/EP.pdf>
+Package pdftex.def Info: FigurasUV/EP.pdf used on input line 330.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 312--313
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 330--331
  [][] 
  []
 
-[7 <./FigurasUV/RS.pdf> <./FigurasUV/EP.pdf>]
+[8 <./FigurasUV/EP.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 337--343
 
-LaTeX Warning: Citation 'REX' on page 8 undefined on input line 319.
+ []
 
-
-LaTeX Warning: Citation 'ggp2' on page 8 undefined on input line 320.
-
-
-LaTeX Warning: Citation 'FE' on page 8 undefined on input line 321.
-
-
-LaTeX Warning: Citation 'FMR' on page 8 undefined on input line 322.
-
-
-LaTeX Warning: Citation 'Multi' on page 8 undefined on input line 323.
-
-
-LaTeX Warning: Citation 'Leb' on page 8 undefined on input line 324.
-
-No file "Laboratorio 3".bbl.
-[8] ("Laboratorio 3.aux"
+("Laboratorio 3.bbl") [9] ("Laboratorio 3.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5776 strings out of 493334
- 80647 string characters out of 3139234
- 170822 words of memory out of 3000000
- 9177 multiletter control sequences out of 15000+200000
- 20440 words of font info for 59 fonts, out of 3000000 for 9000
+ 5801 strings out of 493334
+ 80942 string characters out of 3139234
+ 171148 words of memory out of 3000000
+ 9199 multiletter control sequences out of 15000+200000
+ 21126 words of font info for 60 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  43i,8n,40p,851b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecbx1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\K
-EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600
+dpi600\ecti1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\KEVINSTEVEN\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <C:\Users\K
+EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800
 .pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecrm1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\KEVINSTEVEN\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\
-KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm090
+\dpi600\ecrm0600.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\
+KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
 0.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecbx0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb>
-Output written on "Laboratorio 3.pdf" (8 pages, 132528 bytes).
+c\dpi600\ecrm0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi600\ecbx0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb>
+Output written on "Laboratorio 3.pdf" (9 pages, 157981 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
+ 449 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

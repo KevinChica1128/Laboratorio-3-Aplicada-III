@@ -246,12 +246,17 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
   \includegraphics[scale=0.5]{FigurasUV/I.pdf}
 \end{figure}
 
+~\\Tanto en la tabla como en la gráfica observamos que las dos primeras componentes son las que más porcentaje de inercia explican, entre las dos explican un porcentaje de inercia acumulado del 88.57\%. Teniendo en cuenta lo anterior, seleccionamos los dos primeros ejes para realizar el AFM.
+
+
 \pagebreak
 \subsection{Nube de individuos}
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/nubeind.pdf}
 \end{figure}
+
+~\\Respecto a la gráfica anterior, se ve que se forman grupos de jugos de naranja que son muy parecidos entre ellos en cuanto a las 8 variables medidas, ya que las distancias son muy pequeñas. Por ejemplo, los jugos 1,2,3 y 11 se podría decir que tienen cualidades muy parecidas en las variables medidas, al igual que los jugos 7,8 y 9 que también se encuentran muy cerca entre ellos.
 
 \pagebreak
 \subsection{Nube de variables}
@@ -260,6 +265,8 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
   \includegraphics[scale=0.5]{FigurasUV/nubevar.pdf}
 \end{figure}
 
+~\\En esta gráfica podemos observar que la variable intensidad del color correspondiente al grupo de percepción previa, esta muy correlacionada positivamente con la variable amargo y negativamente con la variable dulce, ambas del grupo percepción posterior. Esto nos indica que mientras mas intenso sea el color del jugo, este será mas amargo y menos dulce. También observamos que la intensidad del ataque(primera sensación del jugo en la boca) coorespondiente a la percepción previa, esta correlacionada positivamente con el ácido y negativamente con la tipicidad, ambas correspondientes a la percepción posterior. Con esto, podemos concluir que mientras mayor sea la intensidad del ataque, el jugo será más ácido y tendrá menor tipicidad.
+
 \pagebreak
 \subsection{Nube de los grupos}
 \begin{figure}[h]
@@ -267,9 +274,12 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
   \includegraphics[scale=0.5]{FigurasUV/nubegru.pdf}
 \end{figure}
 
+~\\En esta gráfica podemos observar que los dos grupos están relativamente cerca, esto nos indica que la percepción previa de los jugos de naranja coincide 
+con la percepción posterior, es decir, existe una relación fuerte entre el aspecto del jugo en cuanto al olor, al color y a la primera sensación en la boca, y el sabor (acidez,dulce, amargo) que este tendrá cuando se deguste.
+
 \subsection{Coeficientes Lg y Rv de Escoufier}
 \begin{itemize}
-\item[-]Coeficiente Lg: Es un índice de unión general entre grupos de variables, que expresa de una manera ``el número de dimensiones comunes (para ambos grupos) de inercia comparable a la inercia axial máxima de un grupo''
+\item[-]Coeficiente Lg: Es un índice de unión general entre grupos de variables, que expresa de una manera ``el número de dimensiones comunes (para ambos grupos) de inercia comparable a la inercia axial máxima de un grupo''. En otras palabras este coeficiente es un indicador de la dimensionalidad de la nube, que es igual al número de direcciones ortogonales de inercia no cero, es decir, el número de valores propios no cero. Esta cantidad es 0 cuando todas las variables de un grupo son ortogonales a todas las variables del otro grupo. Es mas alto en cuanto cada una de las variables de un grupo este más relacionada con el conjunto de variables del otro grupo.
 
 ~\\Los coeficientes Lg se pueden observar en la siguiente tabla:
 \begin{center}
@@ -283,7 +293,9 @@ MFA                       &   1.0105158         &   0.9857795 &1.0845333\\
 \end{tabular} 
 \end{center}
 
+~\\Podemos concluir que la dimsensionalidad de toda la percepción o degustación (1.0845333) es un poco mayor que la dimensionalidad de las dos percepciones (1.0839432 para la previa y 1.0384112 para la posterior). Además, de acuerdo con los coeficientes Lg podemos observar que tanto la percepción previa como la posterior tienen una estructura común parecida (1.0105158 y 0.9857795) con la totalidad de la degustación.
 
+\pagebreak
 \item[-]Coeficiente Rv de Escoufier: Es una generalización multivariada del coeficiente de correlación de Pearson al cuadrado. Este coeficiente mide el vínculo entre dos grupos o dos matrices de variables. Este coeficiente, al igual que el de correlación de Pearson, se encuentra entre 0(todas las variables del primer grupo o matriz, son ortogonales a todas las variables del segundo grupo o matriz) y 1(los dos grupos o matrices son homotéticos)
 
 ~\\Los coeficientes Rv se pueden observar en la siguiente tabla:
@@ -299,29 +311,35 @@ MFA                  &        0.9320054        &    0.9289101& 1.0000000\\
 \end{center}
 \end{itemize}
 
-\pagebreak
+~\\Podemos concluir que de acuerdo con las medidas de RV, ambos grupos (percepción previa y posterior) tienen una estructura cercana a la de toda la degustación. Los valores de los coeficientes son respectivamente de 0.9320054 y 0.9289101. Ademas entre la percepción previa y posterior el coeficiente Rv es de 0.7315340 lo que nos indica que existe un vinculo considerablemente fuerte entre estos dos grupos.
+
 \subsection{Representación superpuesta}
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.45]{FigurasUV/RS.pdf}
 \end{figure}
 
+~\\En esta gráfica podemos observar que los jugos 1,2,3 y 11 tienen altos valores en pulpa, tipicidad y dulce; los jugos 6,12 y 5 tienen altos valores en intensidad de color, intensidad del olor y en la variable amargo; el jugo 4 tiene altos valores en las tres variables de percepción previa y, en acidez y amargo de percepción posterior. Finalmente, los jugos 7,8,9 y 10, tienen valores bajos en las variables intensidad de color, intensidad de olor y amargo.
+
+~\\Se podría decir que los mejores jugos teniendo en cuenta las variables medidas son el 1,2,3 y 11, ya que estos tienen mayor pulpa, tipicidad y dulce.
+
+\pagebreak
 \subsection{Ejes parciales}
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/EP.pdf}
 \end{figure}
 
-
+~\\Esta gráfica muestra la proyección de los componentes principales normalizados de cada uno de los 2 grupos (percepción previa y percepción posterior) en términos de los dos primeros componentes del AFM. El primer componente del AFM, vemos que esta muy relacionado como era de esperarse, con el primer componente de cada grupo (percepción previa positivamente y percepción posterior negativamente), y el segundo componente del AFM, esta relacionado con el segundo componente de cada grupo, ambos se relacionan positivamente. Se observa que las otras componentes de cada grupo no tienen mucha relación con las dos primeras componentes del AFM.
 
 
 \pagebreak
-~\\\nocite{REX}
+~\\\nocite{AFM}
 \nocite{ggp2}
 \nocite{FE}
 \nocite{FMR}
-\nocite{Multi}
-\nocite{Leb}
+\nocite{FShiny}
+\nocite{MMDA}
 
 % //// --------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------

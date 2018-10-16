@@ -1,0 +1,37 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Brigitte~Escofier}{2008}{AFM}
+Brigitte~Escofier, J.~P.  \harvardyearleft 2008\harvardyearright , {\em
+  Analyses factorielles simples et multiples : Objectifs, méthodes et
+  interprétation}, sciences sup, 4ème édition edn, Dunod.
+
+\harvarditem{Josse \harvardand\ Husson}{2016}{MMDA}
+Josse, J. \harvardand\ Husson, F.  \harvardyearleft 2016\harvardyearright ,
+  `{missMDA}: A package for handling missing values in multivariate data
+  analysis', {\em Journal of Statistical Software} {\bf 70}(1),~1--31.
+
+\harvarditem{Kassambara \harvardand\ Mundt}{2017}{FE}
+Kassambara, A. \harvardand\ Mundt, F.  \harvardyearleft 2017\harvardyearright ,
+  {\em factoextra: Extract and Visualize the Results of Multivariate Data
+  Analyses}.
+\newblock R package version 1.0.5.
+\newline\harvardurl{https://CRAN.R-project.org/package=factoextra}
+
+\harvarditem[L\^e et~al.]{L\^e, Josse \harvardand\ Husson}{2008}{FMR}
+L\^e, S., Josse, J. \harvardand\ Husson, F.  \harvardyearleft
+  2008\harvardyearright , `{FactoMineR}: A package for multivariate analysis',
+  {\em Journal of Statistical Software} {\bf 25}(1),~1--18.
+
+\harvarditem[Vaissie et~al.]{Vaissie, Monge \harvardand\ Husson}{2017}{FShiny}
+Vaissie, P., Monge, A. \harvardand\ Husson, F.  \harvardyearleft
+  2017\harvardyearright , {\em Factoshiny: Perform Factorial Analysis from
+  'FactoMineR' with a Shiny Application}.
+\newblock R package version 1.0.6.
+\newline\harvardurl{https://CRAN.R-project.org/package=Factoshiny}
+
+\harvarditem{Wickham}{2009}{ggp2}
+Wickham, H.  \harvardyearleft 2009\harvardyearright , {\em ggplot2: Elegant
+  Graphics for Data Analysis}, Springer-Verlag New York.
+\newline\harvardurl{http://ggplot2.org}
+
+\end{thebibliography}
