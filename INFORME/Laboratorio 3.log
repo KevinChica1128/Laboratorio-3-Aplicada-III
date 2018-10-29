@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  16 OCT 2018 15:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  22 OCT 2018 21:46
 entering extended mode
 **"./Laboratorio 3.tex"
 ("Laboratorio 3.tex"
@@ -522,19 +522,19 @@ File: FigurasUV/RS.pdf Graphic file (type pdf)
 Package pdftex.def Info: FigurasUV/RS.pdf used on input line 319.
 (pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
 
-[7 <./FigurasUV/RS.pdf>] <FigurasUV/EP.pdf, id=58, 1027.84pt x 545.03625pt>
+[7 <./FigurasUV/RS.pdf>] <FigurasUV/EP.pdf, id=59, 1027.84pt x 545.03625pt>
 File: FigurasUV/EP.pdf Graphic file (type pdf)
 
 <use FigurasUV/EP.pdf>
-Package pdftex.def Info: FigurasUV/EP.pdf used on input line 330.
+Package pdftex.def Info: FigurasUV/EP.pdf used on input line 328.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 330--331
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 328--329
  [][] 
  []
 
 [8 <./FigurasUV/EP.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 337--343
+Underfull \hbox (badness 10000) in paragraph at lines 378--384
 
  []
 
@@ -566,9 +566,9 @@ KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
 c\dpi600\ecrm0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\l
 jfour\jknappen\ec\dpi600\ecbx0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb>
-Output written on "Laboratorio 3.pdf" (9 pages, 157981 bytes).
+Output written on "Laboratorio 3.pdf" (9 pages, 160854 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
+ 452 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

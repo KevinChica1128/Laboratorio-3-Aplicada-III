@@ -29,7 +29,6 @@ res.mfa <- MFA(as.data.frame(matrizoriginalR$completeObs),group=c(3,5),type=c("s
 
 MFAshiny(res.mfa)
 
-
 #Con imputación por medio del metodo EM:
 matrizoriginalEM<-imputeMFA(as.data.frame(datos),group = c(3,5),type = rep("s",2),method = "EM") 
 matrizoriginalEM$completeObs #Matriz original imputada EM
@@ -60,6 +59,11 @@ get_mfa_var(res.mfa1) #Otra forma
 x11()
 fviz_mfa_var(res.mfa1)
 
+#Gráfica variables e individuos juntos
+x11()
+s.label(res.mfa1$ind$coord,box=FALSE)
+s.label(res.mfa1$quanti.var$coord,add.plot=TRUE)
+
 #Resultados para los grupos, coeficientes lg y rv
 x11()
 fviz_mfa_group(res.mfa1,xlim=c(0,1),ylim=c(0,1))
@@ -83,13 +87,14 @@ fviz_contrib(res.mfa1, "group", axes = 2)
 
 ### Representación superpuesta(No estoy seguro si esta es)
 x11()
-s.label(res.mfa1$ind$coord,box=FALSE)
-s.label(res.mfa1$quanti.var$coord,add.plot=TRUE)
-
+fviz_mfa_ind(res.mfa1, partial = "all") 
 
 
 #Gráfica de ejes parciales
 x11()
 fviz_mfa_axes(res.mfa1)
 
-
+#Construcción indice
+#Indice de los jugos para el primer grupo (percepción previa)
+I=res.mfa1$quanti.var$coord[1:3,1]%*%t(matrizoriginalEM$completeObs[,-c(4,5,6,7,8)])
+Ie=(I-min(I))/(max(I)-min(I))*100 #Reescalado de indices
