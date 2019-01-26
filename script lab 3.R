@@ -37,6 +37,9 @@ res.mfa1 <- MFA(as.data.frame(matrizoriginalEM$completeObs),group=c(3,5),type=c(
 
 MFAshiny(res.mfa1)
 
+#Matriz de correlaciones
+cor(matrizoriginalEM$completeObs)
+
 #Porcentaje de inercia explicado
 res.mfa1$eig  #Una forma
 get_eigenvalue(res.mfa1) #otra forma
@@ -85,7 +88,7 @@ x11()
 fviz_contrib(res.mfa1, "group", axes = 2)
 
 
-### Representación superpuesta(No estoy seguro si esta es)
+### Representación superpuesta
 x11()
 fviz_mfa_ind(res.mfa1, partial = "all") 
 
@@ -98,3 +101,4 @@ fviz_mfa_axes(res.mfa1)
 #Indice de los jugos para el primer grupo (percepción previa)
 I=res.mfa1$quanti.var$coord[1:3,1]%*%t(matrizoriginalEM$completeObs[,-c(4,5,6,7,8)])
 Ie=(I-min(I))/(max(I)-min(I))*100 #Reescalado de indices
+

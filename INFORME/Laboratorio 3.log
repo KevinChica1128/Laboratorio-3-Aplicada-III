@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  29 OCT 2018 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  25 JAN 2019 20:06
 entering extended mode
 **"./Laboratorio 3.tex"
 ("Laboratorio 3.tex"
@@ -465,17 +465,22 @@ Overfull \hbox (8.2182pt too wide) in paragraph at lines 177--193
 [1
 
 {C:/Users/KEVINSTEVEN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (44.58052pt too wide) in paragraph at lines 204--222
+Overfull \hbox (8.21434pt too wide) in paragraph at lines 196--212
+[][] 
+ []
+
+
+Overfull \hbox (44.58052pt too wide) in paragraph at lines 224--242
 [][] 
  []
 
 [2] <FigurasUV/I.pdf, id=20, 1027.84pt x 545.03625pt>
 File: FigurasUV/I.pdf Graphic file (type pdf)
  <use FigurasUV/I.pdf>
-Package pdftex.def Info: FigurasUV/I.pdf used on input line 246.
+Package pdftex.def Info: FigurasUV/I.pdf used on input line 266.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 246--247
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 266--267
  [][] 
  []
 
@@ -484,68 +489,68 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 246--247
 File: FigurasUV/nubeind.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubeind.pdf>
-Package pdftex.def Info: FigurasUV/nubeind.pdf used on input line 256.
+Package pdftex.def Info: FigurasUV/nubeind.pdf used on input line 300.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 256--257
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 300--301
  [][] 
  []
 
-[4 <./FigurasUV/nubeind.pdf>]
-<FigurasUV/nubevar.pdf, id=36, 1027.84pt x 545.03625pt>
+[4 <./FigurasUV/nubeind.pdf>] [5]
+<FigurasUV/nubevar.pdf, id=39, 1027.84pt x 545.03625pt>
 File: FigurasUV/nubevar.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubevar.pdf>
-Package pdftex.def Info: FigurasUV/nubevar.pdf used on input line 265.
+Package pdftex.def Info: FigurasUV/nubevar.pdf used on input line 373.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 265--266
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 373--374
  [][] 
  []
 
-[5 <./FigurasUV/nubevar.pdf>]
-<FigurasUV/nubegru.pdf, id=43, 1027.84pt x 545.03625pt>
+[6 <./FigurasUV/nubevar.pdf>] [7]
+<FigurasUV/nubegru.pdf, id=50, 1027.84pt x 545.03625pt>
 File: FigurasUV/nubegru.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubegru.pdf>
-Package pdftex.def Info: FigurasUV/nubegru.pdf used on input line 274.
+Package pdftex.def Info: FigurasUV/nubegru.pdf used on input line 417.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 274--275
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 417--418
  [][] 
  []
 
-[6 <./FigurasUV/nubegru.pdf>]
-<FigurasUV/RS.pdf, id=50, 1027.84pt x 545.03625pt>
+[8 <./FigurasUV/nubegru.pdf>]
+<FigurasUV/RS.pdf, id=57, 1027.84pt x 545.03625pt>
 File: FigurasUV/RS.pdf Graphic file (type pdf)
  <use FigurasUV/RS.pdf>
-Package pdftex.def Info: FigurasUV/RS.pdf used on input line 319.
+Package pdftex.def Info: FigurasUV/RS.pdf used on input line 468.
 (pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
 
-[7 <./FigurasUV/RS.pdf>] <FigurasUV/EP.pdf, id=59, 1027.84pt x 545.03625pt>
+[9 <./FigurasUV/RS.pdf>] <FigurasUV/EP.pdf, id=71, 1027.84pt x 545.03625pt>
 File: FigurasUV/EP.pdf Graphic file (type pdf)
 
 <use FigurasUV/EP.pdf>
-Package pdftex.def Info: FigurasUV/EP.pdf used on input line 328.
+Package pdftex.def Info: FigurasUV/EP.pdf used on input line 477.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 328--329
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 477--478
  [][] 
  []
 
-[8 <./FigurasUV/EP.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 378--384
+[10 <./FigurasUV/EP.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 527--533
 
  []
 
-("Laboratorio 3.bbl") [9] ("Laboratorio 3.aux"
+("Laboratorio 3.bbl") [11] ("Laboratorio 3.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
  5801 strings out of 493334
  80942 string characters out of 3139234
- 171148 words of memory out of 3000000
+ 171149 words of memory out of 3000000
  9199 multiletter control sequences out of 15000+200000
  21126 words of font info for 60 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -565,10 +570,15 @@ KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
 0.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
 c\dpi600\ecrm0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\l
 jfour\jknappen\ec\dpi600\ecbx0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb>
-Output written on "Laboratorio 3.pdf" (9 pages, 160854 bytes).
+ublic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Laboratorio 3.pdf" (11 pages, 222961 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
+ 499 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
