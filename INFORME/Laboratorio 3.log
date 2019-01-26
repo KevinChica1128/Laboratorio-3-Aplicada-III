@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  25 JAN 2019 20:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  25 JAN 2019 22:05
 entering extended mode
 **"./Laboratorio 3.tex"
 ("Laboratorio 3.tex"
@@ -501,10 +501,10 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 300--301
 File: FigurasUV/nubevar.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubevar.pdf>
-Package pdftex.def Info: FigurasUV/nubevar.pdf used on input line 373.
+Package pdftex.def Info: FigurasUV/nubevar.pdf used on input line 374.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 373--374
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 374--375
  [][] 
  []
 
@@ -513,10 +513,10 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 373--374
 File: FigurasUV/nubegru.pdf Graphic file (type pdf)
 
 <use FigurasUV/nubegru.pdf>
-Package pdftex.def Info: FigurasUV/nubegru.pdf used on input line 417.
+Package pdftex.def Info: FigurasUV/nubegru.pdf used on input line 421.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 417--418
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 421--422
  [][] 
  []
 
@@ -524,22 +524,22 @@ Overfull \hbox (13.43475pt too wide) in paragraph at lines 417--418
 <FigurasUV/RS.pdf, id=57, 1027.84pt x 545.03625pt>
 File: FigurasUV/RS.pdf Graphic file (type pdf)
  <use FigurasUV/RS.pdf>
-Package pdftex.def Info: FigurasUV/RS.pdf used on input line 468.
+Package pdftex.def Info: FigurasUV/RS.pdf used on input line 472.
 (pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
 
 [9 <./FigurasUV/RS.pdf>] <FigurasUV/EP.pdf, id=71, 1027.84pt x 545.03625pt>
 File: FigurasUV/EP.pdf Graphic file (type pdf)
 
 <use FigurasUV/EP.pdf>
-Package pdftex.def Info: FigurasUV/EP.pdf used on input line 477.
+Package pdftex.def Info: FigurasUV/EP.pdf used on input line 481.
 (pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
 
-Overfull \hbox (13.43475pt too wide) in paragraph at lines 477--478
+Overfull \hbox (13.43475pt too wide) in paragraph at lines 481--482
  [][] 
  []
 
 [10 <./FigurasUV/EP.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 527--533
+Underfull \hbox (badness 10000) in paragraph at lines 531--537
 
  []
 
@@ -576,7 +576,7 @@ m/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Laboratorio 3.pdf" (11 pages, 222961 bytes).
+Output written on "Laboratorio 3.pdf" (11 pages, 223971 bytes).
 PDF statistics:
  499 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
