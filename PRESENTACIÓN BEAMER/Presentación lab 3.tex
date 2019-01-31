@@ -8,7 +8,7 @@
 \usepackage{graphicx}
 \usepackage{ragged2e}
 \setbeamertemplate{navigation symbols}{} 
-\author[Kevin - Alejandro x2 - Natalia ]{Kevin García 1533173 \newline Alejandro Vargas 1525953 \newline Alejandro Soto 15 \newline Natalia Buitron 15}
+\author[Kevin - Alejandro x2 - Natalia ]{Kevin García 1533173 \newline Alejandro Vargas 1525953 \newline Alejandro Soto 1532457 \newline Natalia Buitron 15}
 \title[Análisis Factorial Múltiple (AFM)]{Laboratorio 3:Análisis Factorial Múltiple (AFM)}
 
 
@@ -391,7 +391,11 @@ Typicity        & 0.6485794 &0.166377831\\
 \begin{frame}
 \frametitle{Coeficiente Lg}
 \begin{itemize}
-\item Coeficiente Lg: Es un índice de unión general entre grupos de variables, que expresa de una manera ``el número de dimensiones comunes (para ambos grupos) de inercia comparable a la inercia axial máxima de un grupo''. En otras palabras este coeficiente es un indicador de la dimensionalidad de la nube, que es igual al número de direcciones ortogonales de inercia no cero, es decir, el número de valores propios no cero. Esta cantidad es 0 cuando todas las variables de un grupo son ortogonales a todas las variables del otro grupo. Es mas alto en cuanto cada una de las variables de un grupo este más relacionada con el conjunto de variables del otro grupo.
+\justifying
+\item Coeficiente Lg: Es un indicador del grado de similitud o deformación con respecto a un foco (homotecia) entre los conjuntos
+de indicadores, y cuando se calcula para un solo conjunto de ellos. Esto se conoce como indicador de la dimensionalidad de la nube, que es igual al número de direcciones ortogonales de inercia no cero, es decir, el número de valores propios no cero. Esta cantidad es 0 cuando todas las variables de un grupo son ortogonales a todas las variables del otro grupo. Es mas alto en cuanto cada una de las variables de un grupo este más relacionada con el conjunto de variables del otro grupo.
+~\\Se define por:
+$$Lg=\frac{Traza(S'T)}{\alpha_1^2 x \lambda_1^2}$$
 \end{itemize}
 \end{frame}
 
@@ -410,16 +414,23 @@ MFA                       &   1.0105158         &   0.9857795 &1.0845333\\
 \end{tabular}
 } 
 \end{center}
-~\\Podemos concluir que la dimsensionalidad de toda la percepción o degustación (1.0845333) es un poco mayor que la dimensionalidad de las dos percepciones (1.0839432 para la previa y 1.0384112 para la posterior). Además, de acuerdo con los coeficientes Lg podemos observar que tanto la percepción previa como la posterior tienen una estructura común parecida (1.0105158 y 0.9857795) con la totalidad de la degustación.
+~\\El valor del coeficiente $Lg_{(P.Previa)}=1.0839$ para la percepción previa indica que es de dimensionalidad uno, es decir, que puede sintetizarse en un solo factor; $Lg_{(P.Posterior)}=1.0384$ indica que la percepción posterior también tiene una dimensión o factor que lo caracteriza. El coeficiente Lg cruzado $Lg_{(P.Prev,P.Post)}=0.7761$ indica que estos dos grupos comparten un factor; y finalmente, el coeficiente $Lg_{(MFA)}=1.0845$ indica que éste se puede sintetizar como mínimo en un factor.
 \end{frame}
 
 \begin{frame}
 \frametitle{Coeficiente Rv de Escoufier}
 ~\\ Es una generalización multivariada del coeficiente de correlación de Pearson al cuadrado. Este coeficiente mide el vínculo entre dos grupos o dos matrices de variables. Este coeficiente, al igual que el de correlación de Pearson, se encuentra entre 0(todas las variables del primer grupo o matriz, son ortogonales a todas las variables del segundo grupo o matriz) y 1(los dos grupos o matrices son homotéticos)
+
+~\\El coeficiente de RV se define como (Robert y Escoufier, 1976; Schlich, 1996):
+
+$$RV(W_i,Wj)=\frac{T(W_i,W_j)}{\left[T(W_i,W_i)\cdot T(W_j,W_j)\right]^\frac{1}{2}}$$
 \end{frame}
 
 \begin{frame}
+\justifying
 \frametitle{Coeficiente Rv de Escoufier}
+~\\Donde $T(W_i,W_j)=\sum\limits_{l,m}w_{l,m}^i w_{l,m}^j$ es un coeficiente de covarianza generalizado entre las matrices $W_i$ y $W_j$, $T(W_i,W_i)=\sum\limits_{l,m}{w_{l,m}^i}^2 $ es una varianza generalizada de la matriz $W_i$ y $w_{l,m}^2$ es el (l,m) elemento de la matriz $W_i$.
+
 ~\\Los coeficientes Rv se pueden observar en la siguiente tabla:
 \begin{center}
 \resizebox{12cm}{!}{
@@ -433,7 +444,12 @@ MFA                  &        0.9320054        &    0.9289101& 1.0000000\\
 \end{tabular} 
 }
 \end{center}
-~\\Podemos concluir que de acuerdo con las medidas de RV, ambos grupos (percepción previa y posterior) tienen una estructura cercana a la de toda la degustación. Los valores de los coeficientes son respectivamente de 0.9320054 y 0.9289101. Ademas entre la percepción previa y posterior el coeficiente Rv es de 0.7315340 lo que nos indica que existe un vinculo considerablemente fuerte entre estos dos grupos.
+\end{frame}
+
+\begin{frame}
+\justifying
+\frametitle{Coeficiente Rv de Escoufier}
+~\\Los valores de los coeficientes $Rv_{(MFA,P.Previa)}=0.932$ y $Rv_{(MFA,P.Posterior)}=0.9289$ nos indican que ambos grupos (percepción previa y posterior) tienen una estructura cercana a la de toda la degustación ó en otras palabras, tienen un grado considerable de asociación con el AFM. Es decir, que su representación sobre los planos generados por el AFM es adecuada. Además, entre la percepción previa y posterior el coeficiente Rv es de 0.7315340 lo que significa que existe un vinculo considerable entre estos dos grupos (algunas de las variables del primer grupo están asociadas con las del segundo grupo).
 \end{frame}
 
 \begin{frame}
@@ -518,6 +534,8 @@ of Statistical Software 25(1), 1-18.
 
 \item Ludovic Lebart, Alain Morineau, M. P. (1995), Statistique exploratoire multidimensionnelle, Dunod,
 Paris.
+
+\item Salamanca, J. A. C. (2017), 'Análisis factorial múltiple para clasificación de universidades latinoamericanas', Comunicaciones en Estadística .
 \end{itemize}
 \end{frame}
 

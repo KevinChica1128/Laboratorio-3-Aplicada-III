@@ -22,6 +22,11 @@ L\^e, S., Josse, J. \harvardand\ Husson, F.  \harvardyearleft
   2008\harvardyearright , `{FactoMineR}: A package for multivariate analysis',
   {\em Journal of Statistical Software} {\bf 25}(1),~1--18.
 
+\harvarditem{Salamanca}{2017}{MFA}
+Salamanca, J. A.~C.  \harvardyearleft 2017\harvardyearright , `Análisis
+  factorial múltiple para clasificación de universidades latinoamericanas',
+  {\em Comunicaciones en Estadística} .
+
 \harvarditem[Vaissie et~al.]{Vaissie, Monge \harvardand\ Husson}{2017}{FShiny}
 Vaissie, P., Monge, A. \harvardand\ Husson, F.  \harvardyearleft
   2017\harvardyearright , {\em Factoshiny: Perform Factorial Analysis from

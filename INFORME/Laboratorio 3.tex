@@ -7,6 +7,7 @@
 % "\documentclass[english]{revcoles}" o por "\documentclass[portuguese]{revcoles}"
 % **** --------------------------------------------------------------------------------
 \documentclass[report,oneside]{revcoles}
+\usepackage{float}
 \usepackage[top=2cm,bottom=1cm,left=2cm,right=2cm]{geometry}
 \labeldocument[
 university = Universidad del Valle,
@@ -76,8 +77,8 @@ year = 2018]
 ]
 \author[firstname = Natalia,
         surname = Buitron,
-        code = Código:  ,
-        email = 
+        code = Código: 1526135 ,
+        email = osorio.natalia@correounivalle.edu.co
 ]
 \end{authors}
 % //// --------------------------------------------------------------------------------
@@ -135,7 +136,9 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 % -------------------------------------------------------------------------------------
 % Título de la primera sección
 % **** --------------------------------------------------------------------------------
-\section{Introducción}
+\begin{itemize}
+\item[\textbf{1.}]\textbf{Introducción}
+\end{itemize}
 ~\\En el presente informe veremos la aplicación del AFM a la base de datos data(orange) de la librería missMDA, la cual corresponde a la descripción sensorial de 12 jugos de naranja por 8 atributos, esta base presenta cerca del 20\% de datos faltantes, por lo cuál se hará primero un proceso de imputación para posteriormente realizar el método AFM. Se analizará e interpretará el porcentaje de Inercia explicado, la nube de individuos,la nube de variables, la nube de los grupos, los coeficientes Lg y Rv de Escoufier y se realizará el gráfico de representación Superpuesta y de los ejes parciales, todo esto luego de un debido análisis descriptivo de las variables del estudio.
 
 ~\\La base de datos es la siguiente:
@@ -159,7 +162,10 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 \hline 
 \end{tabular} 
 
-\section{Análisis descriptivo}
+\begin{itemize}
+\item[\textbf{2.}]\textbf{Análisis descriptivo}
+\end{itemize}
+
 \begin{itemize}
 \item Definición de variables:
 \begin{itemize}
@@ -190,8 +196,8 @@ NA's  &        2      &1       &3        &4       &3       &4       &2    &0    
 \hline 
 \end{tabular} 
 }
-
 \item Matriz de correlaciones:
+~\\A partir de la matriz de datos imputada que se mostrará posteriormente, se obtuvo la siguiente matriz de correlaciones.
 
 \resizebox{17cm}{!} {
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -209,14 +215,19 @@ Typicity            &  -0.4570463&    -0.31737571     &  -0.8447980&  0.6527152&
 \hline
 \end{tabular} 
 }
-
 \end{itemize}
 
-\section{Análisis Factorial Múltiple}
+~\\Podemos ver que la variable Bitter(Amargo) esta altamente correlacionada con la mayoría de las otras variables, positivamente con las variables intensidad del color(0.8327), intensidad del color(0.7312), intensidad del ataque(0.8725) y ácido(0.8149), y negativamente con las variables dulce(-0.9269), pulpa(-0.5) y tipicidad(-0.7165). También se observa que la variable intensidad del ataque esta altamente correlacionada con la variable ácido, con una correlación casi perfecta(0.9584), entre otras correlaciones importantes que se observan en la matriz. 
+
+\begin{itemize}
+\item[\textbf{3.}]\textbf{Análisis Factorial Múltiple}
+\end{itemize}
 ~\\Para realizar el AFM, debemos dividir la tabla en subtablas dependiendo de los tipos de variables y su definición. En este caso, dado que todas las variables son cuantitativas continuas, nuestro criterio de división se baso en la definición de las variables. Decidimos dividir la tabla en dos subtablas, la primera consta de las tres primeras variables(columnas), Intensidad del color, intensidad del olor e intensidad del ataque, esta primera tabla fue denominada percepción previa, ya que las tres variables se miden antes de degustar el jugo. La segunda subtabla consta de las cinco últimas variables, dulce, acido, amargo, pulpa y tipicidad, esta segunda tabla fue denominada percepción posterior, ya que todas estas variables involucradas son medibles solamente después de catar o degustar el jugo.
 
+\begin{itemize}
+\item[\textbf{3.1.}]\textbf{Imputación AFM}
+\end{itemize}
 
-\subsection{Imputación AFM}
 ~\\Dado que la base de datos tiene valores faltantes en una cantidad considerable(20\% de valores faltantes), se realizó una imputación o estimación de estos valores por el método EM.
 
 ~\\La matriz imputada es:
@@ -241,7 +252,10 @@ Typicity            &  -0.4570463&    -0.31737571     &  -0.8447980&  0.6527152&
 \end{tabular} 
 
 \pagebreak
-\subsection{Porcentaje de inercia explicado}
+\begin{itemize}
+\item[\textbf{3.2.}]\textbf{Porcentaje de inercia explicado}
+\end{itemize}
+
 ~\\El porcentaje de varianza explicado por cada dimensión se puede ver en la siguiente tabla:
 
 \begin{center}
@@ -268,11 +282,15 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
 
 ~\\Tanto en la tabla como en la gráfica observamos que las dos primeras componentes son las que más porcentaje de inercia explican, entre las dos explican un porcentaje de inercia acumulado del 88.57\%. Teniendo en cuenta lo anterior, seleccionamos los dos primeros ejes para realizar el AFM.
 
-
 \pagebreak
-\subsection{Resultados para los individuos}
+\begin{itemize}
+\item[\textbf{3.2.}]\textbf{Resultados para los individuos}
+
 ~\\Los resultados para los individuos en las dos primeras componentes son:
-\subsubsection{Coordenadas}
+\begin{itemize}
+\item[\textbf{3.2.1.}]\textbf{Coordenadas}
+\end{itemize}
+
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -294,7 +312,10 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
 \end{tabular}
 \end{center}
 
-\subsubsection{Nube de individuos}
+\begin{itemize}
+\item[\textbf{3.2.2.}]\textbf{Nube de individuos}
+\end{itemize}
+
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/nubeind.pdf}
@@ -302,7 +323,11 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
 
 ~\\Respecto a la gráfica anterior, se ve que se forman grupos de jugos de naranja que son muy parecidos entre ellos en cuanto a las 8 variables medidas, ya que las distancias son muy pequeñas. Por ejemplo, los jugos 1,2,3 y 11 se podría decir que tienen cualidades muy parecidas en las variables medidas, al igual que los jugos 7,8 y 9 que también se encuentran muy cerca entre ellos.
 
-\subsubsection{Contribuciones}
+\pagebreak
+\begin{itemize}
+\item[\textbf{3.2.3.}]\textbf{Contribuciones}
+\end{itemize}
+
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -325,7 +350,10 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
 \end{center}
 ~\\Las contribuciones nos dicen que tanto contribuyen las variables o los individuos a la construcción de cada eje. En este caso, los individuos (jugos) que más aportan a la construcción del eje 1 son 4,11 y 12, mientras que los individuos 2,5,7,8 y 9 son los que más aportan a la construcción del eje 2.
 
-\subsubsection{Cosenos cuadrados}
+\begin{itemize}
+\item[\textbf{3.2.3.}]\textbf{Cosenos cuadrados}
+\end{itemize}
+\end{itemize}
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -348,10 +376,15 @@ Dim.8 &0.001761408   &     0.0666192        &           100.00000\\
 \end{center}
 ~\\Los cosenos cuadrados nos muestran que tan bien representados están las variables o individuos en cada dimensión. En este caso, podemos ver que la dimensión 1 ó el eje 1 representa muy bien a los individuos(jugos) 1,3,4,5,10,11 y 12, mientras que la dimensión 2 ó eje 2 representa mejor los jugos 7 ,8 y 9.
 
-\pagebreak
-\subsection{Resultados para las variables}
+\begin{itemize}
+\item[\textbf{3.3.}]\textbf{Resultados para las variables}
+
+
 ~\\Los resultados para las variables en las dos primeras componentes son:
-\subsubsection{Coordenadas}
+\begin{itemize}
+\item[\textbf{3.3.1.}]\textbf{Coordenadas}
+\end{itemize}
+
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -368,15 +401,23 @@ Typicity        & -0.8053443 & 0.40789439\\
 \hline
 \end{tabular}
 \end{center}
-\subsubsection{Nube de variables}
-\begin{figure}[h]
+
+
+\begin{itemize}
+\item[\textbf{3.3.2.}]\textbf{Nube de variables}
+\end{itemize}
+
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/nubevar.pdf}
 \end{figure}
 
 ~\\En esta gráfica podemos observar que la variable intensidad del color correspondiente al grupo de percepción previa, esta correlacionada positivamente con la variable amargo y negativamente con la variable dulce, ambas del grupo percepción posterior. Esto nos indica que mientras mas intenso sea el color del jugo, este será mas amargo y menos dulce. También observamos que la intensidad del ataque(primera sensación del jugo en la boca) coorespondiente a la percepción previa, esta correlacionada positivamente con el ácido y negativamente con la tipicidad, ambas correspondientes a la percepción posterior. Con esto, podemos concluir que mientras mayor sea la intensidad del ataque, el jugo será más ácido y tendrá menor tipicidad.
 
-\subsubsection{Contribuciones}
+\begin{itemize}
+\item[\textbf{3.3.3.}]\textbf{Contribuciones}
+\end{itemize}
+
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -395,7 +436,11 @@ Typicity        &  8.978116&  8.4611302\\
 \end{center}
 ~\\Las variables ó atributos que más aportan a la construcción del eje 1 son la intensidad del color y del ataque, mientras que la pulpa y la intensidad del olor son los atributos que mas aportan a la construcción del eje 2.
 
-\subsubsection{Cosenos cuadrados}
+\pagebreak
+\begin{itemize}
+\item[\textbf{3.3.4.}]\textbf{Cosenos cuadrados}
+\end{itemize}
+\end{itemize}
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -414,8 +459,10 @@ Typicity        & 0.6485794 &0.166377831\\
 \end{center}
 ~\\Podemos ver que la dimensión ó eje 1 representa muy bien los atributos de intensidad del ataque, intensidad del color, amargo, dulzor y acidez, mientras que la dimensión ó eje 2 representa mejor la intensidad del olor y la pulpa.
 
-\pagebreak
-\subsection{Nube de los grupos}
+\begin{itemize}
+\item[\textbf{3.4.}]\textbf{Nube de los grupos}
+\end{itemize}
+
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/nubegru.pdf}
@@ -424,9 +471,17 @@ Typicity        & 0.6485794 &0.166377831\\
 ~\\En esta gráfica podemos observar que los dos grupos están relativamente cerca, esto nos indica que la percepción previa de los jugos de naranja coincide 
 con la percepción posterior, es decir, existe una relación fuerte entre el aspecto del jugo en cuanto al olor, al color y a la primera sensación en la boca, y el sabor (acidez,dulce, amargo) que este tendrá cuando se deguste.
 
-\subsection{Coeficientes Lg y Rv de Escoufier}
 \begin{itemize}
-\item[-]Coeficiente Lg: Es un índice de unión general entre grupos de variables, que expresa de una manera ``el número de dimensiones comunes (para ambos grupos) de inercia comparable a la inercia axial máxima de un grupo''. En otras palabras este coeficiente es un indicador de la dimensionalidad de la nube, que es igual al número de direcciones ortogonales de inercia no cero, es decir, el número de valores propios no cero. Esta cantidad es 0 cuando todas las variables de un grupo son ortogonales a todas las variables del otro grupo. Es mas alto en cuanto cada una de las variables de un grupo este más relacionada con el conjunto de variables del otro grupo.
+\item[\textbf{3.5.}]\textbf{Coeficientes Lg y Rv de Escoufier}
+\end{itemize}
+
+\begin{itemize}
+\item[-]Coeficiente Lg: Es un indicador del grado de similitud o deformación con respecto a un foco (homotecia) entre los conjuntos
+de indicadores, y cuando se calcula para un solo conjunto de ellos. Esto se conoce como indicador de la dimensionalidad de la nube, que es igual al número de direcciones ortogonales de inercia no cero, es decir, el número de valores propios no cero. Esta cantidad es 0 cuando todas las variables de un grupo son ortogonales a todas las variables del otro grupo. Es mas alto en cuanto cada una de las variables de un grupo este más relacionada con el conjunto de variables del otro grupo.
+~\\Se define por:
+$$Lg=\frac{Traza(S'T)}{\alpha_1^2 x \lambda_1^2}$$
+
+~\\donde $\alpha_1$ y $\lambda_1$ es el primer valor propio de S y de T respectivamente.
 
 ~\\Los coeficientes Lg se pueden observar en la siguiente tabla:
 \begin{center}
@@ -440,9 +495,8 @@ MFA                       &   1.0105158         &   0.9857795 &1.0845333\\
 \end{tabular} 
 \end{center}
 
-~\\Podemos concluir que la dimsensionalidad de toda la percepción o degustación (1.0845333) es un poco mayor que la dimensionalidad de las dos percepciones (1.0839432 para la previa y 1.0384112 para la posterior). Además, de acuerdo con los coeficientes Lg podemos observar que tanto la percepción previa como la posterior tienen una estructura común parecida (1.0105158 y 0.9857795) con la totalidad de la degustación.
+~\\El valor del coeficiente $Lg_{(P.Previa)}=1.0839$ para la percepción previa indica claramente que es de dimensionalidad uno, es decir, que puede sintetizarse en un solo factor; $Lg_{(P.Posterior)}=1.0384$ indica que la percepción posterior también tiene una dimensión o factor que lo caracteriza. El coeficiente Lg cruzado $Lg_{(P.Prev,P.Post)}=0.7761$ indica que estos dos grupos comparten un factor; y finalmente, el coeficiente $Lg_{(MFA)}=1.0845$ indica que éste se puede sintetizar como mínimo en un factor.
 
-\pagebreak
 \item[-]Coeficiente Rv de Escoufier: Es una generalización multivariada del coeficiente de correlación de Pearson al cuadrado. Este coeficiente mide el vínculo entre dos grupos o dos matrices de variables. Este coeficiente, al igual que el de correlación de Pearson, se encuentra entre 0(todas las variables del primer grupo o matriz, son ortogonales a todas las variables del segundo grupo o matriz) y 1(los dos grupos o matrices son homotéticos, es decir, las dos matrices son muy parecidas).
 
 ~\\El coeficiente de RV se define como (Robert y Escoufier, 1976; Schlich, 1996):
@@ -464,9 +518,13 @@ MFA                  &        0.9320054        &    0.9289101& 1.0000000\\
 \end{center}
 \end{itemize}
 
-~\\Podemos concluir que de acuerdo con las medidas de RV, ambos grupos (percepción previa y posterior) tienen una estructura cercana a la de toda la degustación. Los valores de los coeficientes son respectivamente de 0.9320054 y 0.9289101. Ademas entre la percepción previa y posterior el coeficiente Rv es de 0.7315340 lo que nos indica que existe un vinculo considerablemente fuerte entre estos dos grupos.
+~\\Los valores de los coeficientes $Rv_{(MFA,P.Previa)}=0.932$ y $Rv_{(MFA,P.Posterior)}=0.9289$ nos indican que ambos grupos (percepción previa y posterior) tienen una estructura cercana a la de toda la degustación ó en otras palabras, tienen un grado considerable de asociación con el AFM. Es decir, que su representación sobre los planos generados por el AFM es adecuada. Además, entre la percepción previa y posterior el coeficiente Rv es de 0.7315340 lo que significa que existe un vinculo considerable entre estos dos grupos (algunas de las variables del primer grupo están asociadas con las del segundo grupo).
 
-\subsection{Representación superpuesta}
+\pagebreak
+\begin{itemize}
+\item[\textbf{3.6.}]\textbf{Representación superpuesta}
+\end{itemize}
+
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.45]{FigurasUV/RS.pdf}
@@ -474,8 +532,11 @@ MFA                  &        0.9320054        &    0.9289101& 1.0000000\\
 
 ~\\(INTERPRETAR TENIENDO EN CUENTA LA NUEVA GRÁFICA)
 
-\pagebreak
-\subsection{Ejes parciales}
+
+\begin{itemize}
+\item[\textbf{3.7.}]\textbf{Ejes parciales}
+\end{itemize}
+
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/EP.pdf}
@@ -483,7 +544,10 @@ MFA                  &        0.9320054        &    0.9289101& 1.0000000\\
 
 ~\\Esta gráfica muestra la proyección de los componentes principales normalizados de cada uno de los 2 grupos (percepción previa y percepción posterior) en términos de los dos primeros componentes del AFM. El primer componente del AFM, vemos que esta muy relacionado como era de esperarse, con el primer componente de cada grupo (percepción previa positivamente y percepción posterior negativamente), y el segundo componente del AFM, esta relacionado con el segundo componente de cada grupo, ambos se relacionan positivamente. Se observa que las otras componentes de cada grupo no tienen mucha relación con las dos primeras componentes del AFM.
 
-\subsection{Construcción indice}
+\begin{itemize}
+\item[\textbf{4.}]\textbf{Construcción indice}
+\end{itemize}
+
 Las coordenadas de las variables para las dos primeras dimensiones son:
 
 \begin{center}
@@ -534,6 +598,7 @@ Typicity         &-0.8054955&  0.3978624  \\
 \nocite{FMR}
 \nocite{FShiny}
 \nocite{MMDA}
+\nocite{MFA}
 
 % //// --------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------
