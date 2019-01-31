@@ -73,6 +73,13 @@ fviz_mfa_group(res.mfa1,xlim=c(0,1),ylim=c(0,1))
 
 res.mfa1$group
 
+# Contribución de los individuos a la primera dimensión
+x11()
+fviz_contrib(res.mfa1, "ind", axes = 1)
+# Contribución de los individuos a la segunda dimensión
+x11()
+fviz_contrib(res.mfa1, "ind", axes = 2)
+
 # Contribución de las variables a la primera dimensión
 x11()
 fviz_contrib(res.mfa1, "quanti.var", axes = 1)
@@ -86,6 +93,19 @@ fviz_contrib(res.mfa1, "group", axes = 1)
 # Contribución de los grupos a la segunda dimensión
 x11()
 fviz_contrib(res.mfa1, "group", axes = 2)
+
+# Cosenos cuadrados de los individuos a la primera dimensión
+x11()
+fviz_cos2(res.mfa1, "ind", axes = 1)
+# Cosenos cuadrados de los individuos a la segunda dimensión
+x11()
+fviz_cos2(res.mfa1, "ind", axes = 2)
+# Cosenos cuadrados de las variables a la primera dimensión
+x11()
+fviz_cos2(res.mfa1, "quanti.var", axes = 1)
+# Cosenos cuadrados de las variables a la segunda dimensión
+x11()
+fviz_cos2(res.mfa1, "quanti.var", axes = 2)
 
 
 ### Representación superpuesta
