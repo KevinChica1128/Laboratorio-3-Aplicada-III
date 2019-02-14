@@ -11,16 +11,6 @@
 \author[Kevin - Alejandro x2 - Natalia ]{Kevin García 1533173 \newline Alejandro Vargas 1525953 \newline Alejandro Soto 1532457 \newline Natalia Buitron 1526135}
 \title[Análisis Factorial Múltiple (AFM)]{Laboratorio 3:Análisis Factorial Múltiple (AFM)}
 
-
-\newcommand\Wider[2][3em]{%
-\makebox[\linewidth][c]{%
-  \begin{minipage}{\dimexpr\textwidth+#1\relax}
-  \raggedright#2
-  \end{minipage}%
-  }%
-}
-
-
 %\setbeamercovered{transparent} 
 %\setbeamertemplate{navigation symbols}{} 
 %\logo{} 
@@ -28,14 +18,12 @@
 %\date{} 
 %\subject{} 
 \begin{document}
-\justify
-\begin{frame}
-\titlepage
+\justifying
+\begin{frame}[plain]
+\maketitle
 \end{frame}
 
-%\begin{frame}
-%\tableofcontents
-%\end{frame}
+
 \begin{frame}
 \frametitle{Introducción}
 ~\\En esta presentación veremos la aplicación del AFM a la base de datos data(orange) de la librería missMDA, la cual corresponde a la descripción sensorial de 12 jugos de naranja por 8 atributos, esta base presenta cerca del 20\% de datos faltantes, por lo cuál se hará primero un proceso de imputación para posteriormente realizar el método AFM. Se analizará e interpretará el porcentaje de Inercia explicado, la nube de individuos,la nube de variables, la nube de los grupos, los coeficientes Lg y Rv de Escoufier y se realizará el gráfico de representación Superpuesta y de los ejes parciales, todo esto luego de un debido análisis descriptivo de las variables del estudio.
@@ -74,7 +62,7 @@
 \begin{itemize}
 \item[-]Intensidad del color: Cuantitativa continua. Escala de intervalos.
 \item[-]Intensidad del olor: Cuantitativa continua. Escala de intervalos.
-\item[-]Intensidad del ataque(sabor inicial del jugo en la boca): Cuantitativa continua. Escala de intervalos.
+\item[-]Intensidad del ataque(sensación inicial del jugo en la boca): Cuantitativa continua. Escala de intervalos.
 \item[-]Dulce: Cuantitativa continua. Escala de intervalos.
 \item[-]Ácido: Cuantitativa continua. Escala de intervalos.
 \item[-]Amargo: Cuantitativa continua. Escala de intervalos.

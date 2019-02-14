@@ -8,14 +8,15 @@
 % **** --------------------------------------------------------------------------------
 \documentclass[report,oneside]{revcoles}
 \usepackage{float}
+\usepackage[latin1]{inputenc}
 \usepackage[top=2cm,bottom=1cm,left=2cm,right=2cm]{geometry}
 \labeldocument[
 university = Universidad del Valle,
 program = Programa Académico de Estadística,
 subject = Estadística Aplicada III,
 city = Cali,
-month = 9,
-year = 2018]
+month = 2,
+year = 2019]
 
 % -------------------------------------------------------------------------------------
 % Espacio reservado para la carga de los paquetes por parte del autor
@@ -35,7 +36,7 @@ year = 2018]
 % -------------------------------------------------------------------------------------
 % Espacio utilizado para colocar las palabras que necesitan partición silábica
 % **** --------------------------------------------------------------------------------
-\hyphenation{Colombia mul-ti-va-ria-do pro-ba-bi-li-dad es-ta-dís-ti-ca}
+\hyphenation{Colombia mul-ti-va-ria-do pro-ba-bi-li-dad es-ta-d\'{i}s-ti-ca}
 % //// --------------------------------------------------------------------------------
 \begin{document}
 
@@ -171,7 +172,7 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 \begin{itemize}
 \item[-]Intensidad del color: Cuantitativa continua. Escala de intervalos.
 \item[-]Intensidad del olor: Cuantitativa continua. Escala de intervalos.
-\item[-]Intensidad del ataque(sabor inicial del jugo en la boca): Cuantitativa continua. Escala de intervalos.
+\item[-]Intensidad del ataque(sensación inicial del jugo en la boca): Cuantitativa continua. Escala de intervalos.
 \item[-]Dulce: Cuantitativa continua. Escala de intervalos.
 \item[-]Ácido: Cuantitativa continua. Escala de intervalos.
 \item[-]Amargo: Cuantitativa continua. Escala de intervalos.
@@ -196,6 +197,8 @@ NA's  &        2      &1       &3        &4       &3       &4       &2    &0    
 \hline 
 \end{tabular} 
 }
+~\\En el resumen estadístico, se puede ver como las variables en rasgos generales son muy parecidas, las variables intensidad del color, intensidad del olor, intensidad del ataque, dulce y ácido poseen una media bastante parecida, al igual que el rango en el que se están moviendo estas variables, vemos como el rango más amplio lo tiene la variable pulpa con un rango de 6,041 lo cual esta sustentado también en que posee la desviación estándar (2.22528) más grande de todas las variables. Las variables dulce y amargo son las que mayor cantidad de datos faltantes tienen, con 4 datos faltantes cada una y la que menos datos faltantes tiene es la variable tipicidad, la cual se encuentra completa (0 datos faltantes).
+~\\
 \item Matriz de correlaciones:
 ~\\A partir de la matriz de datos imputada que se mostrará posteriormente, se obtuvo la siguiente matriz de correlaciones.
 
@@ -217,7 +220,7 @@ Typicity            &  -0.4570463&    -0.31737571     &  -0.8447980&  0.6527152&
 }
 \end{itemize}
 
-~\\Podemos ver que la variable Bitter(Amargo) esta altamente correlacionada con la mayoría de las otras variables, positivamente con las variables intensidad del color(0.8327), intensidad del color(0.7312), intensidad del ataque(0.8725) y ácido(0.8149), y negativamente con las variables dulce(-0.9269), pulpa(-0.5) y tipicidad(-0.7165). También se observa que la variable intensidad del ataque esta altamente correlacionada con la variable ácido, con una correlación casi perfecta(0.9584), entre otras correlaciones importantes que se observan en la matriz. 
+~\\Podemos ver que la variable Bitter(Amargo) esta altamente correlacionada con la mayoría de las otras variables, positivamente con las variables intensidad del color(0.8327), intensidad del olor(0.7312), intensidad del ataque(0.8725) y ácido(0.8149), y negativamente con las variables dulce(-0.9269), pulpa(-0.5) y tipicidad(-0.7165). También se observa que la variable intensidad del ataque esta altamente correlacionada con la variable ácido, con una correlación casi perfecta(0.9584), entre otras correlaciones importantes que se observan en la matriz. 
 
 \begin{itemize}
 \item[\textbf{3.}]\textbf{Análisis Factorial Múltiple}
@@ -251,7 +254,6 @@ Typicity            &  -0.4570463&    -0.31737571     &  -0.8447980&  0.6527152&
 \hline 
 \end{tabular} 
 
-\pagebreak
 \begin{itemize}
 \item[\textbf{3.2.}]\textbf{Porcentaje de inercia explicado}
 \end{itemize}
